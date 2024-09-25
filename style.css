@@ -1,0 +1,82 @@
+body {
+  font-family: sans-serif;
+  margin: auto;
+  max-width: 1280px;
+  background-color: black;
+}
+
+h1,h2,h3,p {
+  color: white;
+}
+
+#main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+
+.library-image {
+  opacity: 0; /* Start invisible */
+  transition: opacity 3s ease-in; /* Slow fade-in effect */
+  filter: grayscale(80%) sepia(20%) contrast(85%) brightness(90%);
+  /* Filter to give an old, crumbly look */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Shadow to make it pop */
+  border: 3px solid rgba(255, 255, 255, 0.5); /* Semi-transparent corners */
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* Apply fade-in animation on load */
+.library-image.show {
+  opacity: 1;
+}
+
+/* QUOTE */
+.quote {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #444;
+  font-style: italic;
+  text-align: left;
+  margin: 0;
+}
+
+.quote::before {
+  content: open-quote;
+  font-size: 2em;
+  color: grey;
+  vertical-align: -0.2em;
+  margin-right: 5px;
+}
+
+.quote::after {
+  content: close-quote;
+  font-size: 2em;
+  color: grey;
+  vertical-align: -0.2em;
+  margin-left: 5px;
+}
+
+.brille_benötigt {
+  display: none;
+}
+
+.btn {
+  color: #444;
+}
+
+/* list elem default styling */
+li {
+  margin: 0; /* Removes default margin for list items */
+  padding: 0; /* Removes default padding for list items */
+  color: white;
+}
